@@ -1,0 +1,103 @@
+{
+    "name": "John Ogbonna",
+    "contact": {
+        "email": {
+            "fieldName": "Email",
+            "link": "john.doe@example.com"
+        },
+        "devto": {
+            "fieldName": "Dev.to",
+            "link": "https://dev.to/johndoe"
+        },
+        "linkedin": {
+            "fieldName": "Linkedin",
+            "link": "https://linkedin.com/in/johndoe"
+        },
+        "github": {
+            "fieldName": "Github",
+            "link": "https://github.com/johndoe"
+        }
+    },
+    "title": "Cloud Developer • DevOps",
+    "description": "Passionate cloud developer with experience in AWS, Azure, and Google Cloud.",
+    "skills": [
+        {
+            "platform": "AWS",
+            "list": [
+                "EC2",
+                "S3",
+                "Lambda",
+                "DynamoDB"
+            ]
+        },
+        {
+            "platform": "Azure",
+            "list": [
+                "Azure Functions",
+                "Blob Storage",
+                "Cosmos DB"
+            ]
+        },
+        {
+            "platform": "Google Cloud",
+            "list": [
+                "Cloud Functions",
+                "Cloud Storage",
+                "Firestore"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Example project 1",
+            "description": "Your future project displayed here",
+            "github": "https://github.com/you/project1",
+            "liveDemo": "https://project1.com",
+            "image": "project_photos/sample1.png"
+        },
+        {
+            "name": "Example project 2",
+            "description": "Your future project displayed here",
+            "github": "https://github.com/you/project2",
+            "liveDemo": "https://project2.com",
+            "image": "project_photos/sample2.png"
+        },
+        {
+            "name": "Example project 3",
+            "description": "Your future project displayed here",
+            "github": "https://github.com/you/project3",
+            "liveDemo": "https://project3.com",
+            "image": "project_photos/sample3.png"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Example Azure Certification",
+            "provider": "Microsoft"
+        },
+        {
+            "name": "Example AWS Certification",
+            "provider": "Amazon Web Services"
+        },
+        {
+            "name": "Example Google Cloud Certification",
+            "provider": "Google Cloud"
+        }
+    ],
+   "articles": {
+        "header": "Check out my recent articles on Dev.to!",
+        "items": [
+            {
+                "title": "Getting Started with AWS Lambda",
+                "url": "https://dev.to/johndoe/aws-lambda",
+                "cover": "https://example.com/aws-lambda-cover.jpg"
+            },
+            {
+                "title": "Deploying Apps on Azure",
+                "url": "https://dev.to/johndoe/azure-apps",
+                "cover": "article_cover_photos/azure-apps.png"
+            }
+        ]
+    },
+    "theme": "blue"
+}
