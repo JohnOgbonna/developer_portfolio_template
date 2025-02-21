@@ -142,7 +142,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             articlesSection.innerHTML = "<h3 class='articles-header'>Articles</h3> <p class='article-subheader'>" + data.articles.header + "</p>";
 
             const articleList = document.createElement("ul");
-
+            articleList.classList.add("article-list");
+            
             data.articles.items.forEach(article => {
                 const articleItem = document.createElement("li");
                 articleItem.classList.add("article-item");
@@ -169,7 +170,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else {
             articlesSection.style.display = "none";
         }
-
 
     } catch (error) {
         console.error("Error loading data.json:", error);

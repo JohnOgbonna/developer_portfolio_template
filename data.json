@@ -1,5 +1,5 @@
 {
-    "name": "John Ogbonna",
+    "name": "rob",
     "contact": {
         "email": {
             "fieldName": "Email",
@@ -88,16 +88,16 @@
         "header": "Check out my recent articles on Dev.to!",
         "items": [
             {
-                "title": "Getting Started with AWS Lambda",
+                "title": "Getting Started with AWS Lambda (example article)",
                 "url": "https://dev.to/johndoe/aws-lambda",
-                "cover": "https://example.com/aws-lambda-cover.jpg"
+                "cover": "article_cover_photos/getting-started-aws-lambda.png"
             },
             {
                 "title": "Deploying Apps on Azure",
                 "url": "https://dev.to/johndoe/azure-apps",
-                "cover": "article_cover_photos/azure-apps.png"
+                "cover": "article_cover_photos/deploying-apps-to-azure.png"
             }
         ]
     },
-    "theme": "blue"
+    "theme": "blue[dark]"
 }
