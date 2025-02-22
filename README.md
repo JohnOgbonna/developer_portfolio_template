@@ -152,7 +152,7 @@ To include your blog articles, add entries under the `articles` array in `data.j
 ```json
 "articles": [
     {
-        "title": "Getting Started with AWS Lambda",
+        "title": "Getting Started with AWS Lambda (example article)",
         "url": "https://dev.to/example-article",
         "cover": "article_cover_photos/aws-lambda.png"
     }, 
@@ -166,9 +166,10 @@ Once you've updated your details, open the `index.html` file in your browser to 
 Tip: install liver server on VS code to dynamically see the updates
 
 ## Customization
-- To change the theme color, modify the `theme` value in `data.json` (You can select between these: `blue`, `grey`, `red`, `violet`, `green`, `deep_yellow`, `orange`, `beige`, `magenta`, `blackWhite`, ). The value must be in the form `dark-color` or `light-color` ex: `"theme": "light-red"`, or `"theme": "light-deepYellow"`, or even `light-blackGrey` (If this isn't done correctly, it will default to dark and / or blue.
+- To change the theme color, modify the `theme` value in `data.json` (You can select between these: `blue`, `grey`, `red`, `violet`, `green`, `deep_yellow`, `orange`, `beige`, `magenta`, `blackGrey` ). The value must be in the form `dark-color` or `light-color` ex: `"theme": "light-red"`, or `"theme": "light-deepYellow"`, or even `light-blackGrey` (If this isn't done correctly, it will default to dark and / or blue.)
 
-)
+- Find a list of themes and even add more themes in the theme.js file
+
 - Modify `styles.css` if you want to adjust the design further.
 
 ## Deployment
@@ -180,7 +181,7 @@ To publish your portfolio online, you can use GitHub Pages:
 
 ---
 
-## We will setup CI/CD later
+## We will use this to practice setup of CI/CD
 
 Enjoy your new cloud developer portfolio! 🚀
 
