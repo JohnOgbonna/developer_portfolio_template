@@ -199,6 +199,7 @@ nav a {
     text-decoration: underline;
     text-align: center;
     margin-top: 2rem;
+    font-size: 1.2rem;
 }
 
 .skill-listitems {
@@ -217,6 +218,7 @@ nav a {
     border: solid 2px var(--primary-color);
     border-radius: 10px;
     text-align: center;
+    font-size: 1rem;
 
     @media (min-width: 768px) {
         font-size: 1rem;
@@ -315,6 +317,10 @@ ul li {
     display: block;
     margin-bottom: 10px;
     border-radius: 6px;
+}
+
+.project-name{
+    font-size: 1.2rem;
 }
 
 .project-links a {
