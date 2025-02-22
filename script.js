@@ -1,8 +1,22 @@
+import themes from './theme.js';
+
+function splitTheme(str) {
+    return str.replace(/[:_-]/g, ' ').split(' ');
+}
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         const response = await fetch("data.json");
         const data = await response.json();
 
+        // Theme
+        const theme = splitTheme(data.theme);
+        const dark = localStorage.getItem("themeMode") || theme[0]
+        const color = themes[theme[1]] ? theme[1] : "blue"
+        const selectedTheme = themes[color][dark] || themes[blue['dark']];
+        Object.entries(selectedTheme).forEach(([property, value]) => {
+            document.documentElement.style.setProperty(property, value);
+        });
+       
         // Basic Information
         document.getElementById("name").textContent = data.name;
         document.getElementById("title").textContent = data.title;
@@ -10,13 +24,54 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Contact Links
         const contactLinks = document.getElementById("contact-links");
+        contactLinks.innerHTML = ""; // Clear existing links
+
         Object.values(data.contact).forEach(contact => {
-            const link = document.createElement("a");
-            link.href = contact.link;
-            link.textContent = contact.fieldName;
-            link.target = "_blank";
-            contactLinks.appendChild(link);
+            if (contact.link) { // Ensure valid links
+                const link = document.createElement("a");
+                link.href = contact.link;
+                link.textContent = contact.fieldName;
+                link.target = "_blank";
+                link.rel = "noopener noreferrer"; // Security for external links
+                link.classList.add("contact-link");
+                contactLinks.appendChild(link);
+            }
         });
+        
+        if (data.allowToggleDarkMode) {
+            const darkModeToggle = document.createElement("li");
+            darkModeToggle.setAttribute("aria-label", "Toggle Dark Mode");
+            darkModeToggle.classList.add("dark-mode-toggle");
+
+            // SVG icon
+            darkModeToggle.innerHTML = `
+               <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m12 22c5.5228475 0 10-4.4771525 10-10s-4.4771525-10-10-10-10 4.4771525-10 10 4.4771525 10 10 10zm0-1.5v-17c4.6944204 0 8.5 3.80557963 8.5 8.5 0 4.6944204-3.8055796 8.5-8.5 8.5z" fill="currentColor"/></svg>
+            `;
+
+            // Add event listener space for future onclick function
+            darkModeToggle.onclick = (e) => {
+                e.preventDefault();
+                console.log("Dark mode toggled");
+
+                // Get current mode from local storage or default to "dark"
+                const currentMode = localStorage.getItem("themeMode") || theme[0] || "dark";
+
+                // Toggle mode
+                const newMode = currentMode === "dark" ? "light" : "dark";
+
+                // Apply new mode while keeping the current color
+                const root = document.documentElement;
+                const color = theme[1] || "blue"; // Default color if not set
+                const newTheme = themes[color][newMode];
+
+                Object.entries(newTheme).forEach(([property, value]) => {
+                    root.style.setProperty(property, value);
+                });
+                // Store only the mode in local storage
+                localStorage.setItem("themeMode", newMode);
+            };
+            contactLinks.appendChild(darkModeToggle);
+        }
 
         // Skills Section
         const skillsSection = document.getElementById("skills");
@@ -143,7 +198,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const articleList = document.createElement("ul");
             articleList.classList.add("article-list");
-            
+
             data.articles.items.forEach(article => {
                 const articleItem = document.createElement("li");
                 articleItem.classList.add("article-item");
@@ -161,7 +216,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                     articleImage.classList.add("article-cover");
                     articleItem.appendChild(articleImage);
                 }
-
                 articleItem.appendChild(articleLink);
                 articleList.appendChild(articleItem);
             });

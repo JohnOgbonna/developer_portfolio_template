@@ -1,5 +1,5 @@
 {
-    "name": "rob",
+    "name": "John Ogbonna",
     "contact": {
         "email": {
             "fieldName": "Email",
@@ -84,20 +84,21 @@
             "provider": "Google Cloud"
         }
     ],
-   "articles": {
+    "articles": {
         "header": "Check out my recent articles on Dev.to!",
         "items": [
             {
                 "title": "Getting Started with AWS Lambda (example article)",
-                "url": "https://dev.to/johndoe/aws-lambda",
+                "url": "https://dev.to/jrandomArticle1",
                 "cover": "article_cover_photos/getting-started-aws-lambda.png"
             },
             {
-                "title": "Deploying Apps on Azure",
-                "url": "https://dev.to/johndoe/azure-apps",
+                "title": "Deploying Apps on Azure (example article)",
+                "url": "https://dev.to/randomArticle2",
                 "cover": "article_cover_photos/deploying-apps-to-azure.png"
             }
         ]
     },
-    "theme": "blue[dark]"
+    "theme": "dark-blue",
+    "allowToggleDarkMode": true
 }
