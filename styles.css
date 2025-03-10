@@ -77,6 +77,10 @@ nav a {
     position: relative;
 }
 
+.contact-link:hover {
+    text-decoration: underline;
+}
+
 .nav-items {
     max-width: 1280px;
     margin: 0 auto;
@@ -87,7 +91,6 @@ nav a {
         gap: 2rem;
         align-items: center;
     }
-
 }
 
 #name {
