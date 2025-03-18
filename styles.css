@@ -206,6 +206,9 @@ nav a {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    max-width: 500px;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @media (min-width: 768px) {
         flex-wrap: wrap;
