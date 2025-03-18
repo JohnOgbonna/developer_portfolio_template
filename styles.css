@@ -298,6 +298,8 @@ ul li {
     @media screen and (min-width: 768px) {
         width: 45%;
         max-width: 350px;
+        justify-content: center;
+        align-self: stretch;
     }
 
     @media screen and (min-width: 1024px) {
