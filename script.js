@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const data = await response.json();
 
         // Theme
-        const theme = splitTheme(data.theme);
+        const theme = splitTheme(data.theme) || ["blue", "dark"];
         const dark = localStorage.getItem("themeMode") || theme[0]
         const color = themes[theme[1]] ? theme[1] : "blue"
         const selectedTheme = themes[color][dark] || themes[blue['dark']];
